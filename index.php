@@ -1,4 +1,15 @@
 <?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['accept_cookies'])) {
+        setcookie('cookie_consent', 'accepted', time() + (365 * 24 * 60 * 60), '/', '', false, true);
+        header('Location: ' . $_SERVER['PHP_SELF']);
+        exit;
+    } elseif (isset($_POST['decline_cookies'])) {
+        setcookie('cookie_consent', 'declined', 0, '/', '', false, true);
+        
+    }
+}
+
 require_once 'config/api_keys.php';
 $page_title = "Accueil";
 include 'includes/header.php';
@@ -453,5 +464,7 @@ include 'includes/header.php';
 
 
 <script src="js/page-scripts.js"></script>
+
+<?php include 'includes/cookie-banner.php'; ?>
 
 <?php include 'includes/footer.php'; ?>
