@@ -125,18 +125,20 @@
 
 .input-group .form-control {
     padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .password-toggle {
     position: absolute;
     right: 1rem;
+    left: auto !important;
     top: 50%;
     transform: translateY(-50%);
     color: var(--gray-500);
     cursor: pointer;
     z-index: 10;
     transition: var(--transition);
-    pointer-events: auto;
+    pointer-events: auto !important;
 }
 
 .password-toggle:hover {

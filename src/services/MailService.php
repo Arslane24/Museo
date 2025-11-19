@@ -50,7 +50,7 @@ class MailService {
         $this->resetRecipients();
 
         // IMPORTANT : localhost doit inclure le port lors du dev local
-        $link = "http://localhost:8000/activate.php?token=$token";
+        $link = "http://museo.alwaysdata.net/activate.php?token=$token";
 
         $this->mail->addAddress($email);
         $this->mail->Subject = "Activation de votre compte Museo";
@@ -71,7 +71,7 @@ class MailService {
     {
         $this->resetRecipients();
 
-        $link = "http://localhost:8000/reset_password.php?token=$token";
+        $link = "http://museo.alwaysdata.net/reset_password.php?token=$token";
 
         $this->mail->addAddress($email);
         $this->mail->Subject = "Réinitialisation de votre mot de passe";
