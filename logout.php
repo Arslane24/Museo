@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 // 1️⃣ Vider toutes les variables de session
 $_SESSION = [];
 

@@ -1,6 +1,8 @@
 <?php
-require_once __DIR__ . '/../../secret/database.php';
-require_once __DIR__ . '/../../src/models/UserManager.php';
+$data = require_once __DIR__ . '/../secret/database.php';
+$pdo = $data['pdo'];
+
+require_once __DIR__ . '/../src/models/UserManager.php';
 
 header('Content-Type: application/json');
 

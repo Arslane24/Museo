@@ -110,7 +110,7 @@ class UserManager {
     }
 
     /** Get user by login or email */
-    public function getUserByLoginOrEmail($identifier) {
+    public function getUserByLoginOrEmail($identifier): array|false {
         $q = $this->pdo->prepare("
             SELECT * FROM users 
             WHERE email = :id OR login = :id
