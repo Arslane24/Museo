@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Burger Menu</title>
+    <link href="css/styles_advanced.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f0f0f0;
+            padding: 20px;
+        }
+        .test-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #0f172a;
+            margin-bottom: 20px;
+        }
+        .burger-test {
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+            background: #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .status {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-family: monospace;
+        }
+        .success { background: #d1fae5; color: #059669; }
+        .error { background: #fee2e2; color: #dc2626; }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🍔 Test Burger Menu</h1>
+        
+        <div class="burger-test">
+            <button class="navbar-toggler-advanced" id="testBurger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <div id="status"></div>
+        
+        <div style="margin-top: 30px;">
+            <h3>Instructions de test:</h3>
+            <ol>
+                <li>Ouvrez la console (F12)</li>
+                <li>Cliquez sur le burger</li>
+                <li>Vérifiez les messages console</li>
+                <li>Le burger doit changer de couleur et forme</li>
+                <li>Vérifiez qu'il n'y a pas de flou</li>
+            </ol>
+        </div>
+        
+        <div style="margin-top: 20px; padding: 15px; background: #dbeafe; border-radius: 8px;">
+            <strong>Styles appliqués:</strong>
+            <ul style="margin: 10px 0; font-family: monospace; font-size: 0.9em;">
+                <li>Width: 48px</li>
+                <li>Height: 48px</li>
+                <li>Border: 2px solid</li>
+                <li>Background: transparent → gold (active)</li>
+                <li>backdrop-filter: none</li>
+                <li>filter: none</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        console.log('🚀 Test page loaded');
+        
+        const burger = document.getElementById('testBurger');
+        const statusDiv = document.getElementById('status');
+        
+        function addStatus(message, type = 'success') {
+            const div = document.createElement('div');
+            div.className = `status ${type}`;
+            div.textContent = message;
+            statusDiv.appendChild(div);
+        }
+        
+        if (burger) {
+            addStatus('✅ Burger element found!', 'success');
+            console.log('✅ Burger element:', burger);
+            
+            burger.addEventListener('click', function() {
+                console.log('🖱️ Burger clicked!');
+                burger.classList.toggle('active');
+                
+                if (burger.classList.contains('active')) {
+                    addStatus('✅ Burger activated (should be gold)', 'success');
+                } else {
+                    addStatus('✅ Burger deactivated (should be normal)', 'success');
+                }
+            });
+            
+            addStatus('✅ Click event attached', 'success');
+            
+        } else {
+            addStatus('❌ Burger element NOT found!', 'error');
+            console.error('❌ Burger not found');
+        }
+        
+        // Test CSS
+        const computedStyle = window.getComputedStyle(burger);
+        console.log('📊 Computed styles:', {
+            width: computedStyle.width,
+            height: computedStyle.height,
+            border: computedStyle.border,
+            background: computedStyle.background,
+            backdropFilter: computedStyle.backdropFilter,
+            filter: computedStyle.filter
+        });
+        
+        if (computedStyle.backdropFilter !== 'none' && computedStyle.backdropFilter !== '') {
+            addStatus('⚠️ backdrop-filter detected: ' + computedStyle.backdropFilter, 'error');
+        } else {
+            addStatus('✅ No backdrop-filter (good!)', 'success');
+        }
+        
+        if (computedStyle.filter !== 'none' && computedStyle.filter !== '') {
+            addStatus('⚠️ filter detected: ' + computedStyle.filter, 'error');
+        } else {
+            addStatus('✅ No filter (good!)', 'success');
+        }
+    </script>
+</body>
+</html>
