@@ -1,0 +1,39 @@
+# robots.txt pour MuseoLink - Plateforme de réservation de musées
+
+User-agent: *
+Allow: /
+
+# Pages principales à indexer
+Allow: /index.php
+Allow: /Explorer.php
+Allow: /reserver.php
+Allow: /contact.php
+
+# Bloquer les pages privées et sensibles
+Disallow: /private_*
+Disallow: /secret/
+Disallow: /include/
+Disallow: /vendor/
+Disallow: /src/
+Disallow: /login.php
+Disallow: /logout.php
+Disallow: /register.php
+Disallow: /reset_password.php
+Disallow: /reset_request.php
+Disallow: /activate.php
+
+# Fichiers et dossiers système
+Disallow: /composer.json
+Disallow: /.git/
+Disallow: /*.sql$
+
+# Autoriser les ressources CSS, JS et images pour un meilleur rendu
+Allow: /css/
+Allow: /js/
+Allow: /public/images/
+
+# Sitemap
+Sitemap: https://museo.alwaysdata.net/sitemap.xml
+
+# Temps de crawl (éviter de surcharger le serveur)
+Crawl-delay: 1

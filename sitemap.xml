@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Page d'accueil MuseoLink - Priorité maximale -->
+    <url>
+        <loc>https://museo.alwaysdata.net/index.php</loc>
+        <lastmod>2025-12-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Page Explorer - Découverte des musées -->
+    <url>
+        <loc>https://museo.alwaysdata.net/Explorer.php</loc>
+        <lastmod>2025-12-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Page Réservation MuseoLink -->
+    <url>
+        <loc>https://museo.alwaysdata.net/reserver.php</loc>
+        <lastmod>2025-12-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Page Contact MuseoLink -->
+    <url>
+        <loc>https://museo.alwaysdata.net/contact.php</loc>
+        <lastmod>2025-12-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+</urlset>
