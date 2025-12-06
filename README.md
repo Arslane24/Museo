@@ -187,10 +187,10 @@ Le projet suit une architecture MVC simplifiée :
 
 ### Auteurs
 
-Yanis Samah : Responsable de projet & support technique & Développeur (Full stack)
-Arslane HAMLAT : Développeur API & intégration des données
-Lisa OUYAHIA : Développeuse front-end & gestion WordPress
-Amel BENAISSA : Développeuse full stack & testeuse
+- Yanis Samah : Responsable de projet & support technique & Développeur (Full stack)
+- Arslane HAMLAT : Développeur API & intégration des données
+- Lisa OUYAHIA : Développeuse front-end & gestion WordPress
+- Amel BENAISSA : Développeuse full stack & testeuse
 
 ## Licence
 
