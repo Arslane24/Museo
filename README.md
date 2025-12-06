@@ -185,10 +185,10 @@ Le projet suit une architecture MVC simplifiée :
 - Vues dans les fichiers `.php` racine
 - Contrôleurs intégrés dans les modèles
 
-## Auteurs
+### Auteurs
 
-Yanis Samah - Responsable de projet & support technique & Développeur (Full stack)
-Arslane HAMLAT - Développeur API & intégration des données
+Yanis Samah : Responsable de projet & support technique & Développeur (Full stack)
+Arslane HAMLAT : Développeur API & intégration des données
 Lisa OUYAHIA : Développeuse front-end & gestion WordPress
 Amel BENAISSA : Développeuse full stack & testeuse
 
