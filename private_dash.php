@@ -711,7 +711,7 @@ $reservationStats = $statsManager->getReservationStats($userId);
         <div class="stat-card">
             <div class="stat-header">
                 <div>
-                    <!-- 🔹 Musées favoris depuis la BD -->
+                    <!--  Musées favoris depuis la BD -->
                     <div class="stat-value"><?= $stats['favorite_museums'] ?></div>
                     <div class="stat-label">Musées favoris</div>
                 </div>
@@ -801,7 +801,7 @@ $reservationStats = $statsManager->getReservationStats($userId);
                         </div>
                         <div class="stat-detail-value">
                             <?php
-                            // 🔹 Total des billets réels depuis la BD
+                            //  Total des billets réels depuis la BD
                             $totalTickets = $reservationStats['total_tickets'] ?? 0;
                             echo $totalTickets;
                             ?>
