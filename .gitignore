@@ -1,0 +1,8 @@
+
+/secret/
+/vendor/
+/documentation/
+composer.lock
+*.conf
+.DS_Store
+*.log

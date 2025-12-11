@@ -1,0 +1,213 @@
+/* CONTACT PAGE - Theme Support */
+
+/* Hero Section */
+.contact-hero {
+    background: var(--gradient-primary);
+    min-height: 40vh;
+    padding-top: 120px;
+}
+
+.contact-hero .hero-title {
+    color: var(--text-inverse);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.contact-hero .hero-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+}
+
+/* Contact Form Section */
+.contact-section {
+    background-color: var(--bg-secondary);
+    padding: 3rem 0;
+}
+
+.contact-card {
+    background: var(--surface-primary);
+    border: 1px solid var(--border-primary);
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+}
+
+.contact-card .card-body {
+    padding: 3rem;
+}
+
+.contact-card h2 {
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Form Controls */
+.contact-form .form-label {
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.contact-form .form-label i {
+    color: var(--brand-secondary);
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+    border: 2px solid var(--border-primary);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: var(--transition-base);
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 0.2rem rgba(26, 77, 122, 0.25);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.contact-form .form-control::placeholder {
+    color: var(--text-tertiary);
+}
+
+.contact-form .form-select option {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Submit Button */
+.btn-contact-submit {
+    background: var(--gradient-accent);
+    color: var(--text-inverse);
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    transition: var(--transition-base);
+}
+
+.btn-contact-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(201, 169, 97, 0.4);
+    color: var(--text-inverse);
+}
+
+/* Info Cards */
+.info-card {
+    background: var(--surface-primary);
+    border: 1px solid var(--border-primary);
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 1.5rem;
+}
+
+.info-card .card-body {
+    padding: 2rem;
+}
+
+.info-card h4 {
+    color: var(--brand-primary);
+    margin-bottom: 1.5rem;
+}
+
+.info-card h6 {
+    color: var(--brand-secondary);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.info-card p {
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.info-card .text-muted {
+    color: var(--text-tertiary) !important;
+}
+
+/* Help Card */
+.help-card {
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+}
+
+.help-card .card-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.help-card .fa-question-circle {
+    color: var(--brand-secondary);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.help-card h5,
+.help-card p {
+    color: var(--text-inverse);
+}
+
+.help-card .btn-light {
+    background: var(--bg-primary);
+    color: var(--brand-primary);
+    border: none;
+    transition: var(--transition-base);
+}
+
+.help-card .btn-light:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Social Buttons */
+.social-buttons .btn {
+    transition: var(--transition-base);
+}
+
+.social-buttons .btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contact-card .card-body {
+        padding: 2rem;
+    }
+    
+    .contact-hero {
+        padding-top: 100px;
+        min-height: 30vh;
+    }
+    
+    .contact-hero .hero-title {
+        font-size: 2rem;
+    }
+    
+    .contact-hero .hero-subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-card .card-body {
+        padding: 1.5rem;
+    }
+    
+    .info-card .card-body {
+        padding: 1.5rem;
+    }
+    
+    .help-card .card-body {
+        padding: 1.5rem;
+    }
+}
