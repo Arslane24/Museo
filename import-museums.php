@@ -32,7 +32,7 @@ $pdo = $data['pdo'];
 </head>
 <body>
     <div class="container">
-        <h1>🏛️ Enrichissement Base de Données - Musées Mondiaux</h1>
+        <h1>Enrichissement Base de Données - Musées Mondiaux</h1>
         <p>Ajout automatique de musées réels avec coordonnées GPS</p>
 
 <?php
@@ -291,14 +291,14 @@ if (isset($_GET['import']) && $_GET['import'] === 'confirm') {
             echo "<h3>{$museum['name']}</h3>";
             echo "<p><strong>{$museum['city']}, {$museum['country']}</strong></p>";
             echo "<p>{$museum['description']}</p>";
-            echo "<p>📍 GPS: {$museum['latitude']}, {$museum['longitude']}</p>";
-            echo "<p>💰 Prix: " . number_format($museum['price'], 2) . " €</p>";
+            echo "<p>GPS: {$museum['latitude']}, {$museum['longitude']}</p>";
+            echo "<p>Prix: " . number_format($museum['price'], 2) . " €</p>";
             echo "</div>";
             
         } catch (Exception $e) {
             $errors++;
             echo "<div class='error'>";
-            echo "<h3>❌ Erreur: {$museum['name']}</h3>";
+            echo "<h3> Erreur: {$museum['name']}</h3>";
             echo "<p>{$e->getMessage()}</p>";
             echo "</div>";
         }
@@ -312,15 +312,15 @@ if (isset($_GET['import']) && $_GET['import'] === 'confirm') {
     
 } else {
     // Afficher la prévisualisation
-    echo "<h2>📋 Prévisualisation des musées à importer</h2>";
+    echo "<h2>Prévisualisation des musées à importer</h2>";
     
     foreach ($museums as $museum) {
         echo "<div class='museum-card'>";
         echo "<h3>{$museum['name']}</h3>";
-        echo "<p><strong>📍 {$museum['city']}, {$museum['country']}</strong></p>";
+        echo "<p><strong> {$museum['city']}, {$museum['country']}</strong></p>";
         echo "<p>{$museum['description']}</p>";
-        echo "<p>🎫 Prix: " . number_format($museum['price'], 2) . " €</p>";
-        echo "<p>🗺️ Coordonnées: {$museum['latitude']}, {$museum['longitude']}</p>";
+        echo "<p>Prix: " . number_format($museum['price'], 2) . " €</p>";
+        echo "<p>Coordonnées: {$museum['latitude']}, {$museum['longitude']}</p>";
         echo "</div>";
     }
     
