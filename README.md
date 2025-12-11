@@ -186,8 +186,36 @@ Le projet suit une architecture MVC simplifiée :
 - Contrôleurs intégrés dans les modèles
 
 ## Auteurs
+- **Yanis SAMAH** - Responsable de projet & support technique
+   - Coordination générale du groupe
+   - Gestion du planning
+   - Organisation des réunions et communication interne
+   - Participation aux choix techniques et à la validation des livrables
+   - Support transversal auprès des développeurs
+   - Développement complet du système d'envoi d'emails (PHPMailer)
+   - Gestion de l'inscription et création de comptes utilisateurs
+   - Optimisation SEO du site
+   - Mise en place du site WordPress vitrine avec Lisa OUYAHIA
 
-Yanis Samah - Développement complet
+- **Arslane HAMLAT** - Développeur API & intégration des données
+   - Développement et gestion des API externes (Harvard, OpenWeather, Géocodage)
+   - Création des scripts internes : recherche, suggestions, données musées
+   - Intégration du back-end avec le front-end
+   - Optimisation des performances et traitement des données
+   - Tests techniques et débogage
+
+- **Lisa OUYAHIA** - Développeuse front-end & gestion WordPress
+   - Conception et développement des pages privées (profils, favoris, réservations…) avec Amel BENAISSA
+   - Intégration front-end des fonctionnalités utilisateur
+   - Gestion complète du site WordPress vitrine avec Yanis SAMAH
+   - Rédaction du contenu documentaire (fonctionnalités, modèle, APIs…)
+   - Gestion de l'hébergement AlwaysData et mise en ligne du projet
+
+- **Amel BENAISSA** - Développeuse front-end & testeuse
+   - Conception et développement des pages privées avec Lisa OUYAHIA
+   - Tests fonctionnels et validation des interfaces
+   - Contribution au développement front-end
+
 
 ## Licence
 
