@@ -47,7 +47,6 @@ $categories = array_unique(array_map(fn($f) => $f['category'], $favorites));
 <main id="main-content" role="main">
 
 <style>
-/* 🔥 TON STYLE EXACT, PAS UN PIXEL CHANGÉ */
 .view-toggle {
     display: flex;
     gap: 0.5rem;
