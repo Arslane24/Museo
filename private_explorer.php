@@ -47,7 +47,7 @@ require_once 'private_nav.php';
                         Explorez les <span class="text-gradient">musées du monde</span>
                     </h1>
                     <p class="lead mb-0">
-                        Ajoutez vos musées préférés en favoris 🌟
+                        Ajoutez vos musées préférés en favoris 
                     </p>
                 </div>
             </div>
