@@ -6,7 +6,7 @@
                     <!-- Brand Section -->
                     <div class="footer-col footer-brand-col">
                         <div class="brand-wrapper">
-                            <img src="/public/images/logo.png" alt="MuseoLink" class="footer-logo">
+                            <img src="/public/images/logo.png" alt="MuseoLink" class="footer-logo" loading="lazy" width="50" height="50">
                             <h3 class="brand-name">MuseoLink</h3>
                         </div>
                         <p class="brand-description">Découvrez et réservez vos billets pour les plus grands musées du monde. Une expérience culturelle inoubliable vous attend.</p>
@@ -153,8 +153,8 @@
     })();
     </script>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Scripts - Defer for better performance -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
 </body>
 </html>

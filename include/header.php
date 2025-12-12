@@ -92,7 +92,17 @@ if (isset($_COOKIE['PHPSESSID']) || isset($_COOKIE['remember_token'])) {
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0f172a">
+    
+    <!-- Performance: Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    
     <title><?php echo isset($page_title) ? $page_title . ' - ' . SITE_NAME : SITE_NAME; ?></title>
     
     <!-- SEO Meta Tags -->
@@ -162,11 +172,16 @@ if (isset($_COOKIE['PHPSESSID']) || isset($_COOKIE['remember_token'])) {
     <link rel="icon" type="image/x-icon" href="public/images/logo.ico">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
     <link href="css/styles_advanced.css" rel="stylesheet">
     <script src="js/styles_advanced.js" defer></script>
     <link href="css/hero-animations.css" rel="stylesheet">
+    <link href="css/accessibility.css?v=20251207" rel="stylesheet">
+    <noscript>
+        <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </noscript>
     <style>
     /* Mobile menu fixes - ONLY FOR MOBILE */
     @media (max-width: 991px) {
@@ -341,15 +356,20 @@ if (isset($_COOKIE['PHPSESSID']) || isset($_COOKIE['remember_token'])) {
     <!-- Mobile Menu Overlay -->
     <div class="navbar-overlay"></div>
 
-    <!-- AOS (Animate On Scroll) Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialiser AOS avec des paramètres optimisés
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            offset: 100,
-            delay: 50
+    <!-- AOS (Animate On Scroll) Library - Defer for performance -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script defer>
+        // Initialiser AOS avec des parametres optimises
+        window.addEventListener('load', function() {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    once: true,
+                    offset: 100,
+                    delay: 50,
+                    disable: 'mobile'
+                });
+            }
         });
     </script>

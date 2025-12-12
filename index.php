@@ -26,7 +26,8 @@ include 'include/header.php';
 ?>
 
 <!-- Hero Section - Image plein écran avec texte animé -->
-<section class="hero-section">
+<main id="main-content" role="main">
+<section class="hero-section" aria-label="Section principale">
     <div class="hero-content">
         <div class="hero-text-wrapper">
             <h1 class="hero-title animate-up">MuseoLink - Réservez Vos Billets de Musées en Ligne</h1>
@@ -91,8 +92,8 @@ include 'include/header.php';
                                 </div>
                             </div>
                             <div class="text-center mt-4">
-                                <button type="submit" class="btn btn-lg px-5 py-3" style="background: linear-gradient(135deg, #c9a961 0%, #dfc480 100%); color: #0f172a; border: none; border-radius: 50px; font-weight: 800; font-size: 1.1rem; transition: all 0.3s ease;">
-                                    <i class="fas fa-search me-2"></i>Rechercher Maintenant
+                                <button type="submit" class="btn btn-lg px-5 py-3" aria-label="Rechercher des musées" style="background: linear-gradient(135deg, #c9a961 0%, #dfc480 100%); color: #0f172a; border: none; border-radius: 50px; font-weight: 800; font-size: 1.1rem; transition: all 0.3s ease;">
+                                    <i class="fas fa-search me-2" aria-hidden="true"></i>Rechercher Maintenant
                                 </button>
                             </div>
                         </form>
@@ -170,7 +171,7 @@ include 'include/header.php';
             <div class="col-md-4" data-aos="fade-up">
                 <div class="museum-card" style="border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; background: white; border: none;">
                     <div style="position: relative; overflow: hidden; height: 280px;">
-                        <img src="public/images/louvre.jpg" alt="Musée du Louvre" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                        <img src="public/images/louvre.jpg" alt="Musée du Louvre" loading="lazy" width="400" height="280" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                         <div style="position: absolute; top: 15px; right: 15px; background: linear-gradient(135deg, #c9a961, #dfc480); color: white; padding: 0.4rem 0.9rem; border-radius: 50px; font-weight: 700; font-size: 0.85rem; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
                             <i class="fas fa-star me-1"></i>4.9
                         </div>
@@ -202,7 +203,7 @@ include 'include/header.php';
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="museum-card" style="border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; background: white; border: none;">
                     <div style="position: relative; overflow: hidden; height: 280px;">
-                        <img src="public/images/british-museum.jpg" alt="British Museum" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                        <img src="public/images/british-museum.jpg" alt="British Museum" loading="lazy" width="400" height="280" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                         <div style="position: absolute; top: 15px; right: 15px; background: linear-gradient(135deg, #c9a961, #dfc480); color: white; padding: 0.4rem 0.9rem; border-radius: 50px; font-weight: 700; font-size: 0.85rem; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
                             <i class="fas fa-star me-1"></i>4.8
                         </div>
@@ -234,7 +235,7 @@ include 'include/header.php';
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="museum-card" style="border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; background: white; border: none;">
                     <div style="position: relative; overflow: hidden; height: 280px;">
-                        <img src="public/images/Met-Museum-1.jpg" alt="MET Museum" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                        <img src="public/images/Met-Museum-1.jpg" alt="MET Museum" loading="lazy" width="400" height="280" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                         <div style="position: absolute; top: 15px; right: 15px; background: linear-gradient(135deg, #c9a961, #dfc480); color: white; padding: 0.4rem 0.9rem; border-radius: 50px; font-weight: 700; font-size: 0.85rem; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
                             <i class="fas fa-star me-1"></i>4.9
                         </div>
@@ -269,12 +270,12 @@ include 'include/header.php';
 
 
 <!-- Section Comment ça marche -->
-<section class="py-5" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); position: relative; overflow: hidden;">
+<section class="py-5" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); position: relative; overflow: hidden;" aria-label="Processus de réservation">
     <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%220.5%22 fill=%22white%22 opacity=%220.05%22/></svg>') repeat; opacity: 0.5;"></div>
     <div class="container py-5" style="position: relative; z-index: 1;">
         <div class="text-center mb-5" data-aos="fade-up">
             <div style="display: inline-block; background: linear-gradient(135deg, #c9a961, #dfc480); color: #0f172a; padding: 0.5rem 1.5rem; border-radius: 50px; font-weight: 700; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 1rem; box-shadow: 0 4px 15px rgba(201, 169, 97, 0.4);">
-                <i class="fas fa-route me-2"></i>PROCESSUS SIMPLE
+                <i class="fas fa-route me-2" aria-hidden="true"></i>PROCESSUS SIMPLE
             </div>
             <h2 style="font-size: 2.5rem; font-weight: 800; color: white; margin-bottom: 1rem;">
                 Comment Ça Marche ?
@@ -478,4 +479,5 @@ function resetSearch() {
 
 <?php include 'include/cookie-banner.php'; ?>
 
+</main>
 <?php include 'include/footer.php'; ?>

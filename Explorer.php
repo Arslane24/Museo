@@ -35,8 +35,9 @@ if (isset($_SESSION['user_id'])) {
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
       crossorigin=""/>
 
+<main id="main-content" role="main">
 <!-- Hero Section avec image de fond + search card intégrée -->
-<section class="explorer-hero">
+<section class="explorer-hero" aria-label="Section d'exploration des musées">
     <div class="hero-overlay"></div>
     <div class="container position-relative">
         <div class="row align-items-center" style="min-height: 400px;">
@@ -70,6 +71,7 @@ if (isset($_SESSION['user_id'])) {
                                id="searchInput" 
                                class="form-control" 
                                placeholder="Rechercher un musée, une ville, un pays..."
+                               aria-label="Rechercher un musée, une ville ou un pays"
                                autocomplete="off">
                         <!-- Dropdown des suggestions -->
                         <div id="searchSuggestions" class="search-suggestions"></div>
@@ -79,10 +81,10 @@ if (isset($_SESSION['user_id'])) {
                 <!-- Custom Country Dropdown -->
                 <div class="col-lg-3">
                     <div class="custom-country-filter">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                         <div class="country-select-wrapper">
-                            <div class="country-select-trigger" id="countryTrigger">Tous les pays</div>
-                            <div class="country-options-dropdown" id="countryDropdown">
+                            <div class="country-select-trigger" id="countryTrigger" role="button" aria-label="Sélectionner un pays" aria-haspopup="listbox" aria-expanded="false" tabindex="0">Tous les pays</div>
+                            <div class="country-options-dropdown" id="countryDropdown" role="listbox" aria-label="Liste des pays">
                                 <div class="country-option" data-value="">Tous les pays</div>
                                 <?php foreach ($countries as $country): ?>
                                     <div class="country-option" data-value="<?= htmlspecialchars($country) ?>">
@@ -104,23 +106,23 @@ if (isset($_SESSION['user_id'])) {
                 
                 <!-- Bouton de recherche -->
                 <div class="col-lg-2">
-                    <button id="searchBtn" class="btn btn-gradient w-100">
-                        <i class="fas fa-search me-2"></i>Rechercher
+                    <button id="searchBtn" class="btn btn-gradient w-100" aria-label="Rechercher un musée">
+                        <i class="fas fa-search" aria-hidden="true"></i> Rechercher
                     </button>
                 </div>
                 
                 <!-- Bouton reset -->
                 <div class="col-lg-2">
-                    <button id="resetBtn" class="btn btn-outline-secondary w-100">
-                        <i class="fas fa-redo me-2"></i>Réinitialiser
+                    <button id="resetBtn" class="btn btn-outline-secondary w-100" aria-label="Réinitialiser les filtres">
+                        <i class="fas fa-redo" aria-hidden="true"></i> Réinitialiser
                     </button>
                 </div>
             </div>
             
             <!-- Category Filters -->
-            <div class="filters-container mt-4" data-aos="fade-up" data-aos-delay="100">
-                <button class="filter-btn active" data-category="all">
-                    <i class="fas fa-globe"></i>
+            <div class="filters-container mt-4" data-aos="fade-up" data-aos-delay="100" role="group" aria-label="Filtres de catégorie">
+                <button class="filter-btn active" data-category="all" aria-pressed="true" aria-label="Tous les musées">
+                    <i class="fas fa-globe" aria-hidden="true"></i>
                     <span>Tous</span>
                 </button>
                 <button class="filter-btn" data-category="art">
