@@ -1,0 +1,144 @@
+/* ===============================
+   🎨 THEME SYSTEM FOR MUSEO
+   Light + Dark modes
+   =============================== */
+
+/* Default — fallback */
+:root {
+    --transition-base: 0.25s ease;
+}
+
+/* -----------------------------------
+   🌞 LIGHT THEME (JOUR)
+----------------------------------- */
+html[data-theme="light"] {
+    color-scheme: light;
+
+    /* Backgrounds */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f7f8fa;
+    --surface-primary: #ffffff;
+    --surface-secondary: #f2f3f5;
+
+    /* Text colors */
+    --text-primary: #0f172a;     /* presque noir */
+    --text-secondary: #475569;   /* gris bleu */
+    --text-muted: #64748b;
+
+    /* Borders */
+    --border-primary: #e2e8f0;
+    --border-secondary: #cbd5e1;
+
+    /* Brand & gold accents */
+    --brand-primary: #c9a961;
+    --brand-secondary: #dfc480;
+    --gradient-accent: linear-gradient(135deg, #c9a961, #dfc480);
+
+    /* Shadows */
+    --shadow-soft: 0 6px 15px rgba(0, 0, 0, 0.07);
+    --shadow-hover: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* -----------------------------------
+   🌙 DARK THEME (NUIT)
+----------------------------------- */
+html[data-theme="dark"] {
+    color-scheme: dark;
+
+    /* Backgrounds */
+    --bg-primary: #0f1218;        /* très sombre */
+    --bg-secondary: #1a1f29;      /* gris bleuté nocturne */
+    --surface-primary: #161b22;
+    --surface-secondary: #1f2633;
+
+    /* Text colors */
+    --text-primary: #f1f5f9;      /* blanc cassé */
+    --text-secondary: #cbd5e1;    /* gris clair */
+    --text-muted: #94a3b8;
+
+    /* Borders */
+    --border-primary: rgba(255, 255, 255, 0.12);
+    --border-secondary: rgba(255, 255, 255, 0.06);
+
+    /* Gold — slightly warmer in dark mode */
+    --brand-primary: #dfc480;
+    --brand-secondary: #e8d7a3;
+    --gradient-accent: linear-gradient(135deg, #dfc480, #bfa565);
+
+    /* Shadows */
+    --shadow-soft: 0 6px 20px rgba(0, 0, 0, 0.5);
+    --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* ------------------------------------------------
+   🔘 COMMON COMPONENT STYLES FOR BOTH THEMES
+------------------------------------------------ */
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Private nav + public nav inherit automatically */
+.private-nav,
+.navbar-advanced {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-primary);
+}
+
+/* Cards */
+.museum-card,
+.testimonial-card,
+.surface-card {
+    background: var(--surface-primary);
+    border: 1px solid var(--border-secondary);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-base);
+}
+
+.museum-card:hover,
+.testimonial-card:hover,
+.surface-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Text-colored elements */
+.muted {
+    color: var(--text-muted);
+}
+
+/* Buttons */
+.btn-gold {
+    background: var(--gradient-accent);
+    color: #fff;
+    border: none;
+    transition: var(--transition-base);
+}
+
+.btn-gold:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    background: var(--surface-secondary);
+    border: 2px solid var(--border-primary);
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: var(--transition-base);
+}
+
+.theme-toggle:hover {
+    color: var(--brand-secondary);
+    border-color: var(--brand-secondary);
+    transform: scale(1.08);
+}

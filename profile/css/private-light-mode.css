@@ -1,0 +1,704 @@
+/* ===============================================
+   PRIVATE PAGES - LIGHT MODE STYLES
+   Mode clair pour les pages privées
+   =============================================== */
+
+/* Le mode sombre est le mode par défaut (pas de data-theme ou data-theme="dark") */
+/* Le mode clair s'active avec data-theme="light" */
+
+/* ===============================================
+   VARIABLES CSS EN MODE CLAIR
+   =============================================== */
+[data-theme="light"] {
+    /* Couleurs de base */
+    --primary-color: #1a4d7a;
+    --secondary-color: #c9a961;
+    --accent-color: #dfc480;
+    --dark-color: #f8f9fa;
+    --darker-color: #e9ecef;
+    
+    /* Textes */
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --text-muted: #718096;
+    
+    /* Gris */
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    
+    /* Backgrounds */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-tertiary: #e9ecef;
+    
+    /* Gradients */
+    --gradient-card: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    --gradient-accent: linear-gradient(135deg, #c9a961 0%, #dfc480 100%);
+    --gradient-primary: linear-gradient(135deg, #1a4d7a 0%, #2c5f8d 100%);
+    
+    /* Bordures */
+    --border-color: #e2e8f0;
+    --border-light: #f1f5f9;
+    
+    /* Ombres */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Mode clair (data-theme="light") */
+[data-theme="light"] body {
+    background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%) !important;
+    color: #1a202c !important;
+}
+
+/* Navigation privée en mode clair */
+[data-theme="light"] .private-nav {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .nav-welcome {
+    color: #4a5568;
+}
+
+[data-theme="light"] .nav-welcome b {
+    color: #1a4d7a;
+}
+
+[data-theme="light"] .nav-links a {
+    color: #4a5568;
+}
+
+[data-theme="light"] .nav-links a:hover {
+    color: #c9a961;
+}
+
+[data-theme="light"] .nav-links a.active {
+    color: #c9a961;
+}
+
+[data-theme="light"] .theme-toggle {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #4a5568;
+}
+
+[data-theme="light"] .theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Cards et conteneurs */
+[data-theme="light"] .card,
+[data-theme="light"] .dash-card,
+[data-theme="light"] .stat-card,
+[data-theme="light"] .activity-card,
+[data-theme="light"] .visit-card,
+[data-theme="light"] .museum-card {
+    background: white !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+    color: #1a202c !important;
+}
+
+[data-theme="light"] .card-header,
+[data-theme="light"] .dash-card-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    color: #1a4d7a !important;
+}
+
+[data-theme="light"] .card-body,
+[data-theme="light"] .dash-card-body {
+    color: #4a5568 !important;
+}
+
+/* Titres dans les cards */
+[data-theme="light"] .card h1,
+[data-theme="light"] .card h2,
+[data-theme="light"] .card h3,
+[data-theme="light"] .card h4,
+[data-theme="light"] .card h5,
+[data-theme="light"] .card h6,
+[data-theme="light"] .stat-card h1,
+[data-theme="light"] .stat-card h2,
+[data-theme="light"] .stat-card h3,
+[data-theme="light"] .stat-card h4,
+[data-theme="light"] .stat-card h5,
+[data-theme="light"] .stat-card h6 {
+    color: #1a4d7a !important;
+}
+
+/* Titres */
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+    color: #1a4d7a !important;
+}
+
+/* Textes */
+[data-theme="light"] p,
+[data-theme="light"] span:not(.badge),
+[data-theme="light"] div {
+    color: #4a5568 !important;
+}
+
+[data-theme="light"] .text-muted {
+    color: #718096 !important;
+}
+
+/* Tous les textes blancs doivent devenir sombres */
+[data-theme="light"] .text-white {
+    color: #1a202c !important;
+}
+
+/* Labels et petits textes */
+[data-theme="light"] .stat-label,
+[data-theme="light"] .activity-time,
+[data-theme="light"] .visit-date,
+[data-theme="light"] small,
+[data-theme="light"] .small-text {
+    color: #718096 !important;
+}
+
+/* Valeurs importantes */
+[data-theme="light"] .stat-value,
+[data-theme="light"] .activity-title,
+[data-theme="light"] .visit-title,
+[data-theme="light"] .museum-name,
+[data-theme="light"] strong,
+[data-theme="light"] b {
+    color: #1a4d7a !important;
+}
+
+/* Formulaires */
+[data-theme="light"] .form-control,
+[data-theme="light"] .form-select {
+    background: white;
+    border: 1px solid #cbd5e0;
+    color: #1a202c;
+}
+
+[data-theme="light"] .form-control:focus,
+[data-theme="light"] .form-select:focus {
+    background: white;
+    border-color: #c9a961;
+    box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
+    color: #1a202c;
+}
+
+[data-theme="light"] .form-control::placeholder {
+    color: #a0aec0;
+}
+
+[data-theme="light"] .form-label {
+    color: #2d3748;
+}
+
+/* Boutons */
+[data-theme="light"] .btn-primary {
+    background: linear-gradient(135deg, #1a4d7a 0%, #2c5f8d 100%);
+    border: none;
+    color: white;
+}
+
+[data-theme="light"] .btn-primary:hover {
+    background: linear-gradient(135deg, #2c5f8d 0%, #1a4d7a 100%);
+}
+
+[data-theme="light"] .btn-secondary {
+    background: linear-gradient(135deg, #c9a961 0%, #dfc480 100%);
+    border: none;
+    color: #1a202c;
+}
+
+[data-theme="light"] .btn-secondary:hover {
+    background: linear-gradient(135deg, #dfc480 0%, #c9a961 100%);
+}
+
+/* Tableaux */
+[data-theme="light"] .table {
+    color: #4a5568 !important;
+    border-color: #e2e8f0 !important;
+}
+
+[data-theme="light"] .table thead th {
+    background: #f8f9fa !important;
+    color: #1a4d7a !important;
+    border-bottom: 2px solid #c9a961 !important;
+    border-color: #e2e8f0 !important;
+}
+
+[data-theme="light"] .table tbody tr {
+    border-bottom: 1px solid #e2e8f0 !important;
+}
+
+[data-theme="light"] .table tbody tr:hover {
+    background: #f8f9fa !important;
+}
+
+[data-theme="light"] .table td,
+[data-theme="light"] .table th {
+    border-color: #e2e8f0 !important;
+    color: #4a5568 !important;
+}
+
+/* Calendrier */
+[data-theme="light"] .calendar {
+    background: white !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+[data-theme="light"] .calendar-header {
+    background: #f8f9fa !important;
+    color: #1a4d7a !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+}
+
+[data-theme="light"] .calendar-day {
+    border: 1px solid #e2e8f0 !important;
+    color: #4a5568 !important;
+}
+
+[data-theme="light"] .calendar-day:hover {
+    background: #f8f9fa !important;
+}
+
+[data-theme="light"] .calendar-day.today {
+    background: rgba(201, 169, 97, 0.1) !important;
+    border-color: #c9a961 !important;
+}
+
+[data-theme="light"] .calendar-day.has-event {
+    background: rgba(26, 77, 122, 0.05) !important;
+}
+
+[data-theme="light"] .calendar-event {
+    background: #1a4d7a !important;
+    color: white !important;
+}
+
+/* Recommandations */
+[data-theme="light"] .recommendation-card,
+[data-theme="light"] .museum-recommendation {
+    background: white !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="light"] .recommendation-card h3,
+[data-theme="light"] .recommendation-card h4,
+[data-theme="light"] .recommendation-card h5,
+[data-theme="light"] .museum-recommendation h3,
+[data-theme="light"] .museum-recommendation h4,
+[data-theme="light"] .museum-recommendation h5 {
+    color: #1a4d7a !important;
+}
+
+[data-theme="light"] .recommendation-card p,
+[data-theme="light"] .museum-recommendation p,
+[data-theme="light"] .recommendation-card span,
+[data-theme="light"] .museum-recommendation span {
+    color: #4a5568 !important;
+}
+
+[data-theme="light"] .recommendation-badge,
+[data-theme="light"] .recommended-label {
+    background: #c9a961 !important;
+    color: white !important;
+}
+
+/* Badges */
+[data-theme="light"] .badge {
+    background: #1a4d7a;
+    color: white;
+}
+
+[data-theme="light"] .badge.bg-success {
+    background: #22c55e !important;
+}
+
+[data-theme="light"] .badge.bg-warning {
+    background: #f59e0b !important;
+    color: #1a202c;
+}
+
+[data-theme="light"] .badge.bg-danger {
+    background: #ef4444 !important;
+}
+
+/* Stats cards */
+[data-theme="light"] .stat-card {
+    background: linear-gradient(135deg, white 0%, #f8f9fa 100%);
+}
+
+[data-theme="light"] .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="light"] .stat-card .stat-icon {
+    color: #c9a961;
+}
+
+[data-theme="light"] .stat-card .stat-value {
+    color: #1a4d7a;
+}
+
+[data-theme="light"] .stat-card .stat-label {
+    color: #718096;
+}
+
+/* Alerts */
+[data-theme="light"] .alert-success {
+    background: rgba(34, 197, 94, 0.1);
+    border-left: 4px solid #22c55e;
+    color: #166534;
+}
+
+[data-theme="light"] .alert-warning {
+    background: rgba(245, 158, 11, 0.1);
+    border-left: 4px solid #f59e0b;
+    color: #92400e;
+}
+
+[data-theme="light"] .alert-danger {
+    background: rgba(239, 68, 68, 0.1);
+    border-left: 4px solid #ef4444;
+    color: #991b1b;
+}
+
+[data-theme="light"] .alert-info {
+    background: rgba(59, 130, 246, 0.1);
+    border-left: 4px solid #3b82f6;
+    color: #1e40af;
+}
+
+/* Pagination */
+[data-theme="light"] .pagination .page-link {
+    background: white;
+    border-color: #cbd5e0;
+    color: #4a5568;
+}
+
+[data-theme="light"] .pagination .page-link:hover {
+    background: #f8f9fa;
+    border-color: #c9a961;
+    color: #c9a961;
+}
+
+[data-theme="light"] .pagination .page-item.active .page-link {
+    background: #c9a961;
+    border-color: #c9a961;
+    color: white;
+}
+
+/* Modal */
+[data-theme="light"] .modal-content {
+    background: white;
+    color: #1a202c;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .modal-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #1a4d7a;
+}
+
+[data-theme="light"] .modal-body {
+    color: #4a5568;
+}
+
+[data-theme="light"] .modal-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown */
+[data-theme="light"] .dropdown-menu {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .dropdown-item {
+    color: #4a5568;
+}
+
+[data-theme="light"] .dropdown-item:hover {
+    background: #f8f9fa;
+    color: #1a4d7a;
+}
+
+/* Liste */
+[data-theme="light"] .list-group-item {
+    background: white;
+    border-color: #e2e8f0;
+    color: #4a5568;
+}
+
+[data-theme="light"] .list-group-item:hover {
+    background: #f8f9fa;
+}
+
+/* Avatar */
+[data-theme="light"] .nav-avatar {
+    border-color: rgba(201, 169, 97, 0.3) !important;
+    background: linear-gradient(135deg, #c9a961 0%, #dfc480 100%) !important;
+    color: white !important;
+}
+
+/* Tous les éléments avec texte potentiellement blanc */
+[data-theme="light"] .card-title,
+[data-theme="light"] .activity-item,
+[data-theme="light"] .visit-item,
+[data-theme="light"] .museum-item,
+[data-theme="light"] .stat-item,
+[data-theme="light"] .list-item {
+    color: #1a4d7a !important;
+}
+
+[data-theme="light"] .card-text,
+[data-theme="light"] .activity-description,
+[data-theme="light"] .visit-description,
+[data-theme="light"] .museum-description {
+    color: #4a5568 !important;
+}
+
+/* Images et icônes avec texte */
+[data-theme="light"] .icon-text,
+[data-theme="light"] .image-caption,
+[data-theme="light"] .card-overlay-text {
+    color: #1a202c !important;
+    text-shadow: none !important;
+}
+
+/* Sections avec potentiel fond foncé en mode sombre */
+[data-theme="light"] .section,
+[data-theme="light"] .container,
+[data-theme="light"] .row {
+    color: #4a5568 !important;
+}
+
+/* Grilles de stats */
+[data-theme="light"] .stats-grid .stat-card {
+    background: linear-gradient(135deg, white 0%, #f8f9fa 100%) !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+[data-theme="light"] .stats-grid .stat-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+    border-color: #c9a961 !important;
+}
+
+/* Icons */
+[data-theme="light"] .fa,
+[data-theme="light"] .fas,
+[data-theme="light"] .far,
+[data-theme="light"] .fab {
+    color: inherit !important;
+}
+
+[data-theme="light"] .stat-icon {
+    color: white !important;
+}
+
+[data-theme="light"] .stat-icon i {
+    color: white !important;
+}
+
+/* Cards de visite upcoming */
+[data-theme="light"] .upcoming-visit,
+[data-theme="light"] .visit-card {
+    background: white !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+[data-theme="light"] .visit-museum-name,
+[data-theme="light"] .visit-name {
+    color: #1a4d7a !important;
+}
+
+[data-theme="light"] .visit-date,
+[data-theme="light"] .visit-time {
+    color: #718096 !important;
+}
+
+/* Activité récente */
+[data-theme="light"] .activity-item {
+    background: white !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+[data-theme="light"] .activity-icon {
+    background: #f8f9fa !important;
+    color: #c9a961 !important;
+}
+
+[data-theme="light"] .activity-title {
+    color: #1a4d7a !important;
+}
+
+[data-theme="light"] .activity-description {
+    color: #4a5568 !important;
+}
+
+[data-theme="light"] .activity-time {
+    color: #94a3b8 !important;
+}
+
+/* Liens */
+[data-theme="light"] a {
+    color: #1a4d7a;
+}
+
+[data-theme="light"] a:hover {
+    color: #c9a961;
+}
+
+/* Exception pour les onglets de filtres - doivent rester blancs */
+[data-theme="light"] .filter-tab,
+[data-theme="light"] .filter-tab:hover,
+[data-theme="light"] .filter-tab span {
+    color: white !important;
+}
+
+/* Breadcrumb */
+[data-theme="light"] .breadcrumb {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="light"] .breadcrumb-item a {
+    color: #4a5568;
+}
+
+[data-theme="light"] .breadcrumb-item.active {
+    color: #1a4d7a;
+}
+
+/* Scrollbar */
+[data-theme="light"] ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+    background: #c9a961;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+    background: #b89550;
+}
+
+/* ===============================================
+   RÈGLES GÉNÉRALES FORTES - Anti texte blanc sur blanc
+   =============================================== */
+
+/* Forcer tous les éléments avec couleur claire à avoir une couleur sombre */
+[data-theme="light"] *[style*="color: white"],
+[data-theme="light"] *[style*="color: #fff"],
+[data-theme="light"] *[style*="color: #ffffff"],
+[data-theme="light"] *[style*="color: rgba(255, 255, 255"] {
+    color: #1a202c !important;
+}
+
+/* Classes potentiellement problématiques */
+[data-theme="light"] .white-text,
+[data-theme="light"] .light-text,
+[data-theme="light"] .text-light {
+    color: #1a202c !important;
+}
+
+/* S'assurer que tous les éléments de contenu sont lisibles */
+[data-theme="light"] .content,
+[data-theme="light"] .main-content,
+[data-theme="light"] .page-content {
+    color: #4a5568 !important;
+}
+
+/* Tous les divs, spans et paragraphes dans les cards */
+[data-theme="light"] .card *:not(.badge):not(.btn):not(.stat-icon):not(.nav-avatar),
+[data-theme="light"] .stat-card *:not(.badge):not(.btn):not(.stat-icon):not(.nav-avatar),
+[data-theme="light"] .activity-card *:not(.badge):not(.btn):not(.stat-icon):not(.nav-avatar) {
+    color: inherit;
+}
+
+/* Réinitialiser les ombres de texte qui pourraient cacher le texte */
+[data-theme="light"] * {
+    text-shadow: none !important;
+}
+
+/* Exceptions pour les éléments qui DOIVENT rester blancs */
+[data-theme="light"] .btn-primary,
+[data-theme="light"] .badge.bg-primary,
+[data-theme="light"] .stat-icon,
+[data-theme="light"] .nav-avatar,
+[data-theme="light"] .calendar-event {
+    color: white !important;
+}
+
+/* ===============================================
+   BANNIÈRE DE BIENVENUE
+   =============================================== */
+[data-theme="light"] .welcome-banner {
+    background: linear-gradient(135deg, #1a4d7a 0%, #2c5f8d 100%) !important;
+}
+
+[data-theme="light"] .welcome-content h1,
+[data-theme="light"] .welcome-banner h1 {
+    color: white !important;
+}
+
+[data-theme="light"] .welcome-content p,
+[data-theme="light"] .welcome-banner p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-theme="light"] .welcome-avatar-letter {
+    background: linear-gradient(135deg, #c9a961 0%, #dfc480 100%) !important;
+    color: white !important;
+}
+
+/* ===============================================
+   FILTRES DES RÉSERVATIONS
+   =============================================== */
+[data-theme="light"] .filter-tabs {
+    background: linear-gradient(135deg, #1a4d7a 0%, #2c5f8d 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="light"] .filter-tab {
+    color: white !important;
+}
+
+[data-theme="light"] .filter-tab:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+[data-theme="light"] .filter-tab.active {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+}
+
+[data-theme="light"] .filter-tab.active .filter-count {
+    background: rgba(255, 255, 255, 0.25) !important;
+    color: white !important;
+}
+
+[data-theme="light"] .filter-count {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+}

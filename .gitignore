@@ -1,0 +1,17 @@
+# Fichiers sensibles
+/secret/
+
+# Dependencies
+/vendor/
+composer.lock
+
+# Documentation
+/documentation/
+README.md
+
+# Configuration files
+*.conf
+
+# System files
+.DS_Store
+*.log
