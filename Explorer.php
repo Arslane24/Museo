@@ -35,7 +35,7 @@ if (isset($_SESSION['user_id'])) {
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
       crossorigin=""/>
 
-<main id="main-content" role="main">
+<main id="main-content">
 <!-- Hero Section avec image de fond + search card intégrée -->
 <section class="explorer-hero" aria-label="Section d'exploration des musées">
     <div class="hero-overlay"></div>
@@ -269,6 +269,8 @@ if (isset($_SESSION['user_id'])) {
 
 <!-- JavaScript personnalisé pour cette page -->
 <script src="js/explorer.js?v=20251207"></script>
+
+</main>
 
 <?php
 // Include footer

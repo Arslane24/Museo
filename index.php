@@ -26,7 +26,7 @@ include 'include/header.php';
 ?>
 
 <!-- Hero Section - Image plein écran avec texte animé -->
-<main id="main-content" role="main">
+<main id="main-content">
 <section class="hero-section" aria-label="Section principale">
     <div class="hero-content">
         <div class="hero-text-wrapper">

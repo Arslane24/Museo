@@ -357,8 +357,8 @@ if (isset($_COOKIE['PHPSESSID']) || isset($_COOKIE['remember_token'])) {
     <div class="navbar-overlay"></div>
 
     <!-- AOS (Animate On Scroll) Library - Defer for performance -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-    <script defer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
         // Initialiser AOS avec des parametres optimises
         window.addEventListener('load', function() {
             if (typeof AOS !== 'undefined') {
